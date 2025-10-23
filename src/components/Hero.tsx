@@ -30,7 +30,7 @@ const Hero = () => {
             <Button className="btn-hero" asChild>
               <a href="#projects">Explore My Work</a>
             </Button>
-            <Button variant="outline" className="btn-hero-outline" asChild>
+            <Button variant="outline" className="btn-hero" asChild>
               <a href="/Tollan_Berhanu_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 Download Resume
               </a>
@@ -40,7 +40,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12">
             <a 
-              href="https://github.com/tollanberhanu" 
+              href="https://github.com/TollanBerhanu" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
@@ -48,7 +48,7 @@ const Hero = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://www.linkedin.com/in/tollanberhanu" 
+              href="https://www.linkedin.com/in/tollan-s-berhanu" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
@@ -64,9 +64,17 @@ const Hero = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="text-muted-foreground" size={24} />
-          </div>
+            <div className="absolute bottom left-1/2 transform -translate-x-1/2 animate-bounce">
+              <a 
+              href="#about" 
+              className="group"
+              >
+              <ArrowDown 
+                className="text-muted-foreground group-hover:text-primary transition-colors duration-200" 
+                size={24} 
+              />
+              </a>
+            </div>
         </div>
       </div>
 
