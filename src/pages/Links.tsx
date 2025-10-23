@@ -64,11 +64,17 @@ const Links = () => {
 
       <div className="w-full max-w-xl space-y-10 text-center">
         <div className="space-y-6">
-          <div className="mx-auto flex h-16 w-56 items-center justify-center rounded-2xl border border-border/60 bg-primary/10 text-2xl font-semibold text-primary shadow-[0_18px_40px_-24px_hsl(var(--primary)/0.7)]">
+          {/* <div className="mx-auto flex h-16 w-56 items-center justify-center rounded-2xl border border-border/60 bg-primary/10 text-2xl font-semibold text-primary shadow-[0_18px_40px_-24px_hsl(var(--primary)/0.7)]">
             Tollan Berhanu
-          </div>
+          </div> */}
           <div className="space-y-2">
-            <h1 className="text-3xl font-semibold text-foreground sm:text-4xl">Connect with ME!</h1>
+            <h1 className="text-3xl font-semibold text-foreground sm:text-4xl">
+              Hello, I'm{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent font-extrabold">
+                Tollan
+                </span>
+              ! 👋
+            </h1>
             <p className="text-sm text-muted-foreground sm:text-base">
               Want to know more about me? You may explore my links below.
             </p>
