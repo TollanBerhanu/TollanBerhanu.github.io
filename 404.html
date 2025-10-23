@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #020617;
+        color: #e2e8f0;
+      }
+    </style>
+    <script>
+      (function redirectToRoot() {
+        var target = window.location.pathname + window.location.search + window.location.hash;
+        sessionStorage.setItem('gh_redirect', target);
+        window.location.replace('/');
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
