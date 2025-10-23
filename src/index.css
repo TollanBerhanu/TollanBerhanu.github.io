@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Dark Theme with Purple/Blue Accents */
+
+@layer base {
+  :root {
+    /* Dark theme - primary colors */
+    --background: 220 15% 8%;
+    --foreground: 210 40% 98%;
+
+    /* Cards and surfaces */
+    --card: 220 15% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Brand colors - Purple/Blue gradient theme */
+    --primary: 250 70% 60%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 250 70% 70%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 260 80% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 250 70% 60%;
+
+    /* Design tokens */
+    --radius: 0.75rem;
+    
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.1));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(220 15% 14%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 20px 40px -10px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 10px 30px -5px hsl(220 15% 5% / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light theme override (not used but keeping for compatibility) */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 250 70% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 260 80% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 250 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: hsl(var(--background));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Custom gradient utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  /* Shadow utilities */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-float-slow {
+    animation: float 15s ease-in-out infinite;
+  }
+  
+  .animate-float-slower {
+    animation: float 20s ease-in-out infinite 2s;
+  }
+  
+  .animate-float-delay {
+    animation: float 18s ease-in-out infinite 4s;
+  }
+  
+  .animate-float-reverse {
+    animation: float-reverse 22s ease-in-out infinite 1s;
+  }
+  
+  .animate-grid-flow {
+    animation: grid-flow 20s linear infinite;
+  }
+  
+  .parallax-slow {
+    transform: translateY(calc(var(--scroll-y, 0) * 0.5px));
+  }
+  
+  .parallax-medium {
+    transform: translateY(calc(var(--scroll-y, 0) * 0.3px));
+  }
+  
+  /* Text gradients */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  /* Hero button variants */
+  .btn-hero {
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-foreground;
+    @apply rounded-xl transition-all duration-300;
+    @apply hover:scale-105 hover:shadow-glow;
+    background: var(--gradient-primary);
+  }
+  
+  .btn-hero-outline {
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold;
+    @apply text-primary border-2 border-primary/30 rounded-xl backdrop-blur-sm;
+    @apply transition-all duration-300 hover:bg-primary/10 hover:border-primary;
+  }
+  
+  /* Card variants */
+  .card-glass {
+    @apply backdrop-blur-md bg-card/50 border border-border/50 rounded-2xl p-6;
+    @apply shadow-card transition-all duration-300 hover:shadow-elegant;
+  }
+  
+  .card-glow {
+    @apply relative overflow-hidden rounded-2xl bg-card border border-border;
+    @apply transition-all duration-300 hover:shadow-glow hover:scale-[1.02];
+  }
+}
