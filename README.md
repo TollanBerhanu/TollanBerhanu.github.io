@@ -1,4 +1,4 @@
-# Welcome my Portfolio
+## Welcome to my Portfolio!
 
 If you want to work locally using your own IDE, you can clone this repo and run it.
 
