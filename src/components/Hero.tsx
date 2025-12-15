@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Code2, Github, Linkedin, Mail, Orbit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
 
@@ -37,16 +37,8 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-12">
-            <a 
-              href="https://github.com/TollanBerhanu" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
-            >
-              <Github size={24} />
-            </a>
+            {/* Social Links */}
+            <div className="flex justify-center space-x-6 mb-12">
             <a 
               href="https://www.linkedin.com/in/tollan-s-berhanu" 
               target="_blank" 
@@ -56,12 +48,36 @@ const Hero = () => {
               <Linkedin size={24} />
             </a>
             <a 
+              href="https://github.com/TollanBerhanu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
+            >
+              <Github size={24} />
+            </a>
+            <a 
               href="mailto:tollanberhanu@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
             >
               <Mail size={24} />
             </a>
-          </div>
+            <a 
+              href="https://leetcode.com/tollan" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
+            >
+              <Code2 size={24} />
+            </a>
+            <a 
+              href="https://orcid.org/0009-0007-8631-5829" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
+            >
+              <Orbit size={24} />
+            </a>
+            </div>
 
           {/* Scroll Indicator */}
             <div className="absolute bottom left-1/2 transform -translate-x-1/2 animate-bounce">
