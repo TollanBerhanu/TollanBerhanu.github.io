@@ -27,8 +27,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, href: "https://github.com/tollanberhanu", label: "GitHub" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/tollanberhanu", label: "LinkedIn" }
+    { icon: <Github className="w-5 h-5" />, href: "https://github.com/TollanBerhanu", label: "GitHub" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/tollan-s-berhanu", label: "LinkedIn" }
   ];
 
   const { ref, isVisible } = useScrollAnimation();
