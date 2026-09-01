@@ -11,7 +11,7 @@ const quickLinks = [
   },
   {
     label: 'LinkedIn',
-    description: 'My professional network and recent updates.',
+    description: 'Connect with me on LinkedIn.',
     href: 'https://www.linkedin.com/in/tollan-s-berhanu/',
     icon: Linkedin,
     external: true,
@@ -39,14 +39,14 @@ const quickLinks = [
   },
   {
     label: 'LeetCode',
-    description: 'My coding challenges and problem-solving practice exercises.',
+    description: 'My coding challenges and problem-solving exercises.',
     href: 'https://leetcode.com/tollan',
     icon: Code2,
     external: true,
   },
   {
     label: 'Portfolio Home Page',
-    description: 'Return to tollanberhanu.github.io for the full story.',
+    description: 'Go to tollanberhanu.github.io for the full story.',
     href: '/',
     icon: Globe2,
     external: false,
@@ -119,10 +119,10 @@ const Links = () => {
             );
           })}
         </div>
-
+        {/* 
         <p className="text-xs text-muted-foreground">
           Tip: Add this page to your bookmarks or share the QR code so teammates can reach the right destination instantly.
-        </p>
+        </p> */}
       </div>
     </div>
   );
