@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowUpRight, Code2, FileText, Github, Globe2, Linkedin, Orbit } from 'lucide-react';
+import { ArrowUpRight, Code2, FileText, Github, Globe2, GraduationCap, Linkedin, Orbit } from 'lucide-react';
 
 const quickLinks = [
   {
@@ -18,23 +18,30 @@ const quickLinks = [
   },
   {
     label: 'GitHub',
-    description: 'Lots of open-source projects and research contributions.',
+    description: 'My open-source projects and code repositories.',
     href: 'https://github.com/TollanBerhanu',
     icon: Github,
     external: true,
   },
   {
-    label: 'LeetCode',
-    description: 'My data structures and algorithms practice and interview prep progress.',
-    href: 'https://leetcode.com/tollan',
-    icon: Code2,
+    label: 'Google Scholar',
+    description: 'My research publications and citations.',
+    href: 'https://scholar.google.com/citations?user=g8QB9dMAAAAJ&hl=en',
+    icon: GraduationCap, //graduation cap
     external: true,
   },
   {
     label: 'ORCID',
-    description: 'I have done 2 peer reviews so far and I have 2 publications on the way.',
+    description: 'My unique researcher identifier and publication record.',
     href: 'https://orcid.org/0009-0007-8631-5829',
     icon: Orbit,
+    external: true,
+  },
+  {
+    label: 'LeetCode',
+    description: 'My coding challenges and problem-solving practice exercises.',
+    href: 'https://leetcode.com/tollan',
+    icon: Code2,
     external: true,
   },
   {
